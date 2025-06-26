@@ -1,25 +1,14 @@
-function count(string) {
- if(string.length === 0) return {};
-  
-  let stringArray = string.split('');
-  let count = 0;
+function countChars(string){
+  if(typeof string !== 'string') return {};
+
+  let stringArray = string.split('').filter(value => value !== ' ');
   let countObject = {};
+
   for(let i=0; i<stringArray.length; i++){
-
-    if(stringArray[i] === ' ') continue;
-    for(let j=i+1; j<stringArray.length; j++){
-      if(stringArray[j] === ' ') continue;
-      if(stringArray[j] === ' ') continue;
-      if(stringArray[i] === stringArray[j]){
-        count ++;
-      }
-       countObject[stringArray[i]] = count;
-    }
-
+    countObject[stringArray[i]] = (countObject[stringArray[i]] || 0) + 1;
   }
-console.log(str)
-  return countObject;
-};
+  console.log(countObject)
+}
 
-let str = 'I am going to school';  /* ii  a   m  n  gg  oooo  t s c h l */
-console.log(count(str));
+let str = 'school going';
+console.log(countChars(str));
