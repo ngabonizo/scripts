@@ -4,7 +4,7 @@ function wordCount(str){
 
   wordCount.cache = wordCount.cache || {};
   let a = str.split(' ');
-  let key = a.join(' ');
+  let key = a.join(' '); // insures consistent formatting
 
   if(wordCount.cache[key]) return wordCount.cache[key];
  
