@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <title>Grid</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    h3{
+      color: blue;
+      text-align: center;
+      font-size: 40px;
+      margin-top: 2px;
+    }
+
+    .parent {
+      display: grid;
+      grid-template-columns: repeat(5, 75px);
+      grid-template-rows: repeat(5, 75px);
+      background-color: rgb(146, 69, 14);
+      gap: 4px 2px;
+      width: 400px;
+      height: 400px;
+      margin: 0 auto;
+      border-radius: 10px;
+      padding-bottom: 5px;
+      padding-top: 5px;
+      position: relative;
+    }
+
+    .children {
+     width: 95%;
+     height: 75px;
+     background-color:  chocolate;
+     margin-left: 10px;
+     margin-top: 5px;
+    }
+
+    .active{
+      background-color: skyblue;
+    }
+
+
+  </style>
+</head>
+
+<body>
+<h3>grid practice</h3>
+<div class="parent">
+  <div class="children active" id="0"></div>
+  <div class="children" id="1"></div>
+  <div class="children" id="2"></div>
+  <div class="children" id="3"></div>
+  <div class="children" id="4"></div>
+
+  <div class="children" id="5"></div>
+  <div class="children" id="6"></div>
+  <div class="children" id="7"></div>
+  <div class="children" id="8"></div>
+  <div class="children" id="9"></div>
+
+    <div class="children" id="10"></div>
+  <div class="children" id="11"></div>
+  <div class="children" id="12"></div>
+  <div class="children" id="13"></div>
+  <div class="children" id="14"></div>
+
+    <div class="children" id="15"></div>
+  <div class="children" id="16"></div>
+  <div class="children" id="17"></div>
+  <div class="children" id="18"></div>
+  <div class="children" id="19"></div>
+
+    <div class="children" id="20"></div>
+  <div class="children" id="21"></div>
+  <div class="children" id="22"></div>
+  <div class="children" id="23"></div>
+  <div class="children" id="24"></div>
+</div>
+
+<script>
+ function waterGarden(targetId){
+document.querySelector('.children.active').classList.remove('active');
+document.getElementById(targetId).classList.add('active')
+
+ }
+
+ waterGarden(2)// call this funtion to specify which part of the garden to water
+</script>
+</body>
+</html>
