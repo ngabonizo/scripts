@@ -11,7 +11,19 @@ console.log(a.last())
 
 // please remember to make the last and first methods nonnumerable using  defineProperty() 
 
+// if there is only one property
+// Object.defineProperty(Object.prototype, 'first', {
+//   enumerable: false
+// })
 
+Object.defineProperties(Object.prototype,{
+  first: {
+    enumerable: false
+  },
+  last: {
+    enumerable: false
+  }
+})
 
 
 
