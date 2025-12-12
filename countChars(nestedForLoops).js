@@ -33,7 +33,7 @@ function countChars(str) {
 
 
 let str = 'Dont worry';
-console.log(countChars(str));
+console.log(countChars(str), 'string 1');
 
 
 
